@@ -1,0 +1,29 @@
+.heading {
+  font-size: 50px;
+  font-style: inherit;
+  color: rgba(68, 68, 110, 0.89);
+  font-weight: lighter;
+}
+.heading span {
+  color: rgb(100, 175, 29);
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.input {
+  padding: 0.15rem;
+  font: inherit;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.button {
+  height: 30px;
+  width: 70px;
+  border: 1px solid rgb(100, 175, 29);
+  background-color: rgb(100, 175, 29);
+  color: white;
+  font-weight: 600;
+  margin-left: 10px;
+  border-radius: 2px;
+}
