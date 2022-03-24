@@ -14,7 +14,7 @@ function Home() {
       async function fetchData() {
         try {
           const data = await axios.get(
-            `http://localhost:5000/api/todo/fetchtodo`,
+            `${process.env.REACT_APP_API_LINK}/api/todo/fetchtodo`,
             {
               headers: {
                 tokenId: localStorage.getItem("tokenId"),
@@ -34,7 +34,7 @@ function Home() {
   }, [navigate]);
   const addTodoHandler = async (todo) => {
     let { data } = await axios.post(
-      `http://localhost:5000/api/todo/addtodo`,
+      `${process.env.REACT_APP_API_LINK}/api/todo/addtodo`,
       { value: todo },
       {
         headers: {
@@ -61,7 +61,7 @@ function Home() {
     });
     axios
       .put(
-        `http://localhost:5000/api/todo/updatetodo/${_id}`,
+        `${process.env.REACT_APP_API_LINK}/api/todo/updatetodo/${_id}`,
         { todoToBeUpdated: x },
         {
           headers: {
@@ -79,7 +79,7 @@ function Home() {
   };
   const deleteHandler = (_id) => {
     axios
-      .delete(`http://localhost:5000/api/todo/deletetodo/${_id}`, {
+      .delete(`${process.env.REACT_APP_API_LINK}/api/todo/deletetodo/${_id}`, {
         headers: {
           tokenId: localStorage.getItem("tokenId"),
         },
