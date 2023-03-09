@@ -1,4 +1,5 @@
 import React from "react";
+import classes from "./Login.module.css";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
 import axios from "axios";
@@ -29,6 +30,7 @@ function Login() {
     <div>
       <h1>LOGIN</h1>
       <GoogleLogin
+        className={classes.btn}
         clientId="939470302591-2voul7j4hudfbiqmq9c7uqk9r8p07kal.apps.googleusercontent.com"
         buttonText="Login With Google"
         onSuccess={responseSuccessGoogle}
