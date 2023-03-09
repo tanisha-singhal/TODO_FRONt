@@ -9,7 +9,7 @@ function Login() {
     await axios({
       method: "POST",
       url: `${process.env.REACT_APP_API_LINK}/api/users/googleLogin`,
-      data: { tokenId: response.tokenId },
+      data: { tokenId: response.credential},
     })
       .then((response) => {
         console.log("User Logged In With Google!!", response);
