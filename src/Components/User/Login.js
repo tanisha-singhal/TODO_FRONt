@@ -5,6 +5,7 @@ import axios from "axios";
 function Login() {
   let navigate = useNavigate();
   const responseSuccessGoogle = async (response) => {
+    console.log(response);
     await axios({
       method: "POST",
       url: `${process.env.REACT_APP_API_LINK}/api/users/googleLogin`,
