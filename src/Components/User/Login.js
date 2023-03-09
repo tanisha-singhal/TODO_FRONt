@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { GoogleLogin } from "react-google-login";
-
 import axios from "axios";
 function Login() {
   let navigate = useNavigate();
@@ -29,7 +28,7 @@ function Login() {
     <div>
       <h1>LOGIN</h1>
       <GoogleLogin
-        clientId="939470302591-2voul7j4hudfbiqmq9c7uqk9r8p07kal.apps.googleusercontent.com"
+        clientId="939470302591-2voul7j4hudfbiqmq9c7uqk9r8p07kal.apps.googleuserconten"
         buttonText="Login With Google"
         onSuccess={responseSuccessGoogle}
         onFailure={responseErrorGoogle}
