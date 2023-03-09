@@ -29,14 +29,14 @@ function Login() {
   return (
     <div>
       <h1>LOGIN</h1>
+      <div className={classes.btn}>
       <GoogleLogin
-        className={classes.btn}
         clientId="939470302591-2voul7j4hudfbiqmq9c7uqk9r8p07kal.apps.googleusercontent.com"
-        buttonText="Login With Google"
         onSuccess={responseSuccessGoogle}
         onFailure={responseErrorGoogle}
         cookiePolicy={"single_host_origin"}
       />
+      </div>
     </div>
   );
 }
